@@ -18,4 +18,11 @@ public class Animal {
         System.out.println(name + " is eating");
     }
 
+    @Override
+    public String toString() {
+        return "Animal{" +
+                "name='" + name + '\'' +
+                '}';
+    }
+
 }

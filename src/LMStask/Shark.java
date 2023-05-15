@@ -12,4 +12,8 @@ public class Shark extends Animal{
         super.live();
     }
 
+    @Override
+    public String toString() {
+        return super.toString();
+    }
 }

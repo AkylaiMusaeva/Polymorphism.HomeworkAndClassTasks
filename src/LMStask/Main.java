@@ -17,33 +17,46 @@ public class Main {
     public static void main(String[] args) {
         Animal []animals={new Shark("Shark"),new Turtle("Turtle"),new Eagle("Eagle"),
                           new Shark("Shark2"),new Turtle("Turtle2"),new Eagle("Eagle2")};
+        Shark[]sharks=new Shark[2];
+        Turtle [] turtles=new Turtle[2];
+        Eagle[]eagles=new Eagle[2];
         for(Animal animal:animals){
-            if (animal.getClass().equals(Shark.class)) {//c 20 строчки до 26 вызов метода с использованием getClass()
-                ((Shark) animal).attack();
-            }else if (animal.getClass().equals(Turtle.class)){
-                ((Turtle) animal).swim();
-            }else if (animal.getClass().equals(Eagle.class)){
-                ((Eagle) animal).fly();
+//            if (animal.getClass().equals(Shark.class)) {//c 20 строчки до 26 вызов метода с использованием getClass()
+//                ((Shark) animal).attack();
+//            }else if (animal.getClass().equals(Turtle.class)){
+//                ((Turtle) animal).swim();
+//            }else if (animal.getClass().equals(Eagle.class)){
+//                ((Eagle) animal).fly();
+//            }
+//            if(animal instanceof Shark){
+//
+//            }
+
+
+            if(animal instanceof Shark) {//С 30 строчки по 38 вызов методов каждого класса с использованием instance of
+                Shark shark=new Shark("Shark1");
+                shark.attack();
+                sharks[0]=shark;
+                System.out.println("------------------------");
+            }else if (animal instanceof Turtle){
+                Turtle turtle=new Turtle("Turtle1");
+                turtle.swim();
+                turtles[0]=turtle;
+                System.out.println("------------------------");
+            }else if(animal instanceof Eagle){
+                Eagle eagle=new Eagle("Eagle1");
+                eagle.fly();
+                eagles[0]=eagle;
+                System.out.println("------------------------");
             }
 
-//            if(animal instanceof Shark) {                   //С 27 строчки по 47 вызов методов каждого класса с использованием instance of
-//                Shark  shark = new Shark("SharkName");
-//                shark.attack();
-//                animal.live();
-//                System.out.println("------------------------");
-//            }else if (animal instanceof Turtle){
-//                Turtle turtle=new Turtle("TurtleName");
-//                turtle.swim();
-//                animal.live();
-//                System.out.println("------------------------");
-//            }else if(animal instanceof Eagle){
-//                Eagle eagle=new Eagle("EagleName");
-//                eagle.fly();
-//                animal.live();
-//                System.out.println("------------------------");
 
 
 
-        }
+
+        }System.out.println(Arrays.toString(sharks));
+        System.out.println(Arrays.toString(turtles));
+        System.out.println(Arrays.toString(eagles));
+
     }
 }

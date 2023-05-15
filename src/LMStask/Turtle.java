@@ -11,4 +11,9 @@ public class Turtle extends Animal{
     public void live() {
         super.live();
     }
+
+    @Override
+    public String toString() {
+        return super.toString();
+    }
 }
